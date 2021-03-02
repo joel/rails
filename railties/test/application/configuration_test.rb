@@ -1219,7 +1219,6 @@ module ApplicationTests
     test "autoloaders" do
       app "development"
 
-      assert Rails.autoloaders.zeitwerk_enabled?
       assert_instance_of Zeitwerk::Loader, Rails.autoloaders.main
       assert_equal "rails.main", Rails.autoloaders.main.tag
       assert_instance_of Zeitwerk::Loader, Rails.autoloaders.once

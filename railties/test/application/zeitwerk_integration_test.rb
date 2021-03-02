@@ -30,7 +30,6 @@ class ZeitwerkIntegrationTest < ActiveSupport::TestCase
     boot
 
     assert decorated?
-    assert Rails.autoloaders.zeitwerk_enabled?
     assert_instance_of Zeitwerk::Loader, Rails.autoloaders.main
     assert_instance_of Zeitwerk::Loader, Rails.autoloaders.once
     assert_equal [Rails.autoloaders.main, Rails.autoloaders.once], Rails.autoloaders.to_a
